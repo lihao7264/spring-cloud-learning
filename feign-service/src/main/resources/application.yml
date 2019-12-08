@@ -1,0 +1,19 @@
+server:
+  port: 8701
+spring:
+  application:
+    name: feign-service
+eureka:
+  client:
+    register-with-eureka: true   #注册到Eureka注册中心中
+    fetch-registry: true     #获取服务列表
+    service-url:
+      defaultZone: http://localhost:8001/eureka/   #指定注册中心地址
+
+feign:
+  hystrix:
+    enabled: true  #在Feign中开启Hystrix
+
+logging:
+  level:
+    com.atlihao.cloud.service.UserService: debug

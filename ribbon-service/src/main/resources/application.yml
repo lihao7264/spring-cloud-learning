@@ -1,0 +1,13 @@
+server:
+  port: 8301
+spring:
+  application:
+    name: ribbon-service
+eureka:
+  client:
+    register-with-eureka: true  #将自己注册到Eureka注册中心
+    fetch-registry: true     #获取注册服务列表
+    service-url:
+      defaultZone: http://localhost:8001/eureka/  #指定注册中心地址
+service-url:
+  user-service: http://user-service
